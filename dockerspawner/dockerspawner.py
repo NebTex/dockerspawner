@@ -276,6 +276,7 @@ class DockerSpawner(Spawner):
         env = super(DockerSpawner, self).get_env()
         env.update(dict(
             JPY_USER=self.user.name,
+            SERVICE_7070_NAME="{0}-butterfly".format(self.user.name),
             JPY_COOKIE_NAME=self.user.server.cookie_name,
             JPY_BASE_URL=self.user.server.base_url,
             JPY_HUB_PREFIX=self.hub.server.base_url
